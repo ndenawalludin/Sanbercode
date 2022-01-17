@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number HTML</title>
+</head>
+<body>
+    <h1>Berlatih Kondisional</h1>
+    
+    <h3>Masukkan nama dan peranmu!</h3>
+    <form action="#" id="formConditional">
+        <input type="text" id="name" placeholder="Isi nama di sini">
+        <input type="text" id="role" placeholder="Isi peran di sini">
+        <input type="submit" value="Mulai Permainan">
+    </form>
+
+    <h3>Jawaban dari console game: </h3>
+    <div id="wrap">
+
+    </div>
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script>
+    
+
+    var name = document.getElementById("name").innerHTML
+    var role = document.getElementById("role").innerHTML
+
+    var form = $("#formConditional")
+    var wrap = $("#wrap")
+
+    form.on("submit", function(e) {
+        wrap.html("")
+        e.preventDefault()
+        /* 
+            ATURAN PERMAINAN 
+            // Output untuk Input nama = '' dan peran = ''
+            // => "Nama harus diisi!"
+
+            //Output untuk Input nama = 'Mikael' dan peran = ''
+            // => "Halo Mikael, Pilih peranmu untuk memulai game!"
+
+            //Output untuk Input nama = 'Nina' dan peran 'Ksatria'
+            // => "Selamat datang di Dunia Proxytia, Nina"
+            // => "Halo Ksatria Nina, kamu dapat menyerang dengan senjatamu!"
+
+            //Output untuk Input nama = 'Danu' dan peran 'Tabib'
+            // => "Selamat datang di Dunia Proxytia, Danu"
+            // "Halo Tabib Danu, kamu akan membantu temanmu yang terluka."
+
+            //Output untuk Input nama = 'Zero' dan peran 'Penyihir'
+            // => "Selamat datang di Dunia Proxytia, Zero"
+            // => "Halo Penyihir Zero, ciptakan keajaiban yang membantu kemenanganmu!"
+
+            PETUNJUK MENGERJAKAN
+            1. Buat Kondisional agar output dari konsol sesuai yang diharapkan
+            2. masukkan lah jawaban dari kondisi yang diberikan oleh User ke dalam variabel jawabanKonsol
+        */
+
+        // Tuliskan Code kamu di sini
+        var name = document.getElementById('name').value;
+        var role = document.getElementById('role').value;
+
+
+
+        var jawabanKonsol = "" 
+        // Isi di sini
+        if (name == '' && role == '') {
+          jawabanKonsol += "Nama harus diisi!"
+        }
+        else if (name == 'Mikael' && role == '' || name == 'mikael' && role == '') {
+          jawabanKonsol += "Halo Mikael, Pilih peranmu untuk memulai game!"
+        }
+        else if (name == 'Danu' && role == 'Tabib' || name == 'danu' && role == 'tabib' || name == 'Danu' && role == 'tabib' || name == 'danu' && role == 'Tabib') {
+          jawabanKonsol += "Selamat datang di Dunia Proxytia, Danu" + "<br>" +
+                           "Halo Tabib Danu, kamu akan membantu temanmu yang terluka."
+        }
+        else if (name == 'Zero' && role == 'Penyihir' || name == 'zero' && role == 'penyihir' || name == 'Zero' && role == 'penyihir' || name == 'zero' && role == 'Penyihir') {
+          jawabanKonsol += "Selamat datang di Dunia Proxytia, Zero" + "<br>" +
+                           "Halo Penyihir Zero, ciptakan keajaiban yang membantu kemenanganmu!"
+        }
+        else {
+          jawabanKonsol += "INPUT YANG DIMASUKKAN SALAH!" + "<br>" +
+                           "COBA LAGI!"
+        }
+        // Code Sampai sini
+
+        // Driver Code, tidak boleh diganggu!
+        wrap.append(jawabanKonsol)
+    })
+
+
+</script>
+</html>

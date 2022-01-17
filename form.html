@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+</head>
+
+<body>
+	<h2>Buat Akun Baru</h2>
+	<h3>Sign Up From</h3>
+
+	<form>
+		<!-- Nama -->
+		<label for="nama_depan">First Name:</label>
+		<br>
+		<input type="text" placeholder="Nama Depan" id="nama_depan">
+		<br><br>
+		<label for="nama_belakang">Last Name:</label>
+		<br>
+		<input type="text" placeholder="Nama Belakang" id="nama_belakang">
+		<br><br>
+
+		<!-- Jenis Kelamin -->
+		<label>Gender:</label>
+		<br>
+		<input type="radio" name="gender" value="0">Male <br>
+		<input type="radio" name="gender" value="1">Female <br>
+		<input type="radio" name="gender" value="2">Other <br><br>
+
+		<!-- Asal -->
+		<label>Nationality</label>
+		<br>
+		<select>
+			<option value="sgpr">Singapore</option>
+			<option value="malay">Malaysia</option>
+			<option value="ina">Indonesia</option>
+		</select><br><br>
+
+		<label>Language Spoken:</label><br>
+		<input type="checkbox" value="0">Bahasa Indonesia <br>
+		<input type="checkbox" value="1">English <br>
+		<input type="checkbox" value="2">Other <br><br>
+
+		<label>Bio:</label>
+		<br>
+		<textarea cols="50" rows="7"></textarea><br>
+
+		<button type="submit"><a href="welcome.html">Sign Up</a></button>
+	</form>
+
+</body>
+</html>

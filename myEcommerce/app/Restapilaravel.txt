@@ -1,0 +1,14 @@
+Cara menggunakan model:
+
+munculin category si item
+public function category (){
+    return $this->belongsTo('App/Category);
+}
+
+cara mengambil model
+$categories = Category::all();
+return view('item.create', compact('categories'))
+
+-keuntungannya dapat mempermudah membuat relasi
+-modifikasi
+bisa buka di website laravel tentang dokumentasi relasi

@@ -1,0 +1,34 @@
+Register:
+            Hapus beberapa yang tidak di butuhkan
+            bcrypt -> untuk encripsi string pada password (keamanan pada password)
+            email unique -> ngasih validasi
+
+            validate
+                required name (Membutuhkan nama)
+                unique
+                confirmed -> membutuhkan konfirmasi, contoh password ada authentic password
+            Jika menggunakan validate, harus menggunakan condition errornya juga
+
+
+Login:
+            Hapus beberapa yang tidak di butuhkan
+            jangan lupa {{csrf_field()}}
+            autentikasikan dengan  akun yang sudah terdaftar
+            
+cara agar aman di route kita menggunakan middleware
+
+Tugas nambahin auth -> untuk tutorialnya ada di telegram
+
+
+CRUD
+1.buat model dan migrasi = php artisan make:model order -m , selanjutnya php artisan migrate
+2.buat contrroler dan resouce = php artisan make:controller namacontroller -r (-r = resource)
+3.gunakan extend jika banyak file html, agar tidak mengulang ngoding (@extend(file yang mau jadi induk), dan @yield)
+4.jika menggunakan model, inport model di awal program (use app/model)
+5.$category = Category::find($id); (memunculkan satu data/satu class/uniq)
+    $category = Category::where('name', $id)->get(); (memunculkan banyak data/banyak class)
+6.untuk melihat data = panggil kategori show yang ada di controller, id, class btn, class icon (show untuk pilihan tertentu)
+7.untuk mengedit data = cari data yang mau di edit di database, menambahkan method put
+8.untuk menghapus data menggunakan form sendiri sama menggunakan {{method_field('Delet')}}
+9.{{csrf_field()}} harus selalu ada di setiap form, karena untuk keamanan data
+10.
